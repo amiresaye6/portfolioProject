@@ -24,7 +24,7 @@ function Hero() {
       <div className="flex justify-center items-center py-14 ">
         <a
           href="#projects"
-          className="transition-transform transform hover:scale-105 flex justify-center items-center bg-[#242424] dark:bg-[#313131] w-44 p-2 rounded-full text-[#e0e0e0] dark:text-light-primary hover:bg-[#313131] dark:hover:bg-[#242424]"
+          className="transition-transform transform hover:scale-105 flex justify-center items-center bg-[#242424] dark:bg-[#212121] w-44 p-2 rounded-full text-[#e0e0e0] dark:text-light-primary hover:bg-[#313131] dark:hover:bg-[#242424]"
         >
           See my projects
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"> <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" /> </svg> </a> </div> </div>);
