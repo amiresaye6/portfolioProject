@@ -6,6 +6,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+      },
+      keyframes: {
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
+      },
       colors: {
         light: {
           primary: '#d4d4d3', // Light mode primary color #161616
