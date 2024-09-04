@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       animation: {
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        marquee: 'marquee 30s linear infinite',
       },
       keyframes: {
         orbit: {
@@ -20,11 +21,15 @@ module.exports = {
               "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
           },
         },
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       colors: {
         light: {
-          primary: '#d4d4d3', // Light mode primary color #161616
-          secondary: '#acacac', // Light mode secondary color #1a1a1a #acacac
+          primary: '#d4d4d3', // Light mode primary color
+          secondary: '#acacac', // Light mode secondary color
         },
         dark: {
           primary: '#161616', // Dark mode primary color
