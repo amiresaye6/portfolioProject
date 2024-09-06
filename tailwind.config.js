@@ -1,20 +1,11 @@
 module.exports = {
-  darkMode: 'class', // Enable dark mode based on a class
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      animation: {
-        marquee: 'marquee 30s linear infinite',
-      },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-      },
       colors: {
         light: {
           primary: '#d4d4d3', // Light mode primary color

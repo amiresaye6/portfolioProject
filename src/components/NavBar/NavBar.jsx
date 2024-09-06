@@ -26,25 +26,26 @@ function NavBar() {
 
     return (
         <div className={`flex flex-col md:flex-row justify-between items-center px-6 py-4 ${darkMode ? 'text-[#d4d4d3]' : 'text-[#161616]'}`}>
-            <div className="flex flex-wrap justify-between items-center gap-5">
-                <div className="flex items-center bg-[#e5e7eb] dark:bg-[#4a4a4a] rounded-full pl-2">
-                    <div className="pr-4">amiralsayed.work@gmail.com</div>
+            {/* Left Section */}
+            <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0 w-full md:w-auto">
+                <div className="flex items-center bg-[#e5e7eb] dark:bg-[#4a4a4a] rounded-full pl-2 gap-2">
+                    <div className="pr-4 text-sm md:text-base">amiralsayed.work@gmail.com</div>
                     <button
-                        className="bg-white dark:bg-[#161616] w-20 dark:text-[#d4d4d3] rounded-full px-3 py-1 border-4 border-[#e5e7eb] dark:border-[#4a4a4a] transition-transform transform hover:scale-105"
+                        className="bg-white dark:bg-[#161616] dark:text-[#d4d4d3] rounded-full px-3 py-1 border-4 border-[#e5e7eb] dark:border-[#4a4a4a] transition-transform transform hover:scale-105"
                         onClick={handleCopyEmail}
                     >
                         Copy
                     </button>
                 </div>
                 <button
-                    className="bg-white dark:bg-[#161616] w-20 dark:text-[#d4d4d3] rounded-full px-3 py-1 border-4 border-[#e5e7eb] dark:border-[#4a4a4a] transition-transform transform hover:scale-105"
+                    className="bg-white dark:bg-[#161616] dark:text-[#d4d4d3] rounded-full px-3 py-1 border-4 border-[#e5e7eb] dark:border-[#4a4a4a] transition-transform transform hover:scale-105"
                     onClick={handleDownloadCV}
                 >
                     CV
                 </button>
                 <button
                     onClick={toggleDarkMode}
-                    className="mt-4 md:mt-0 p-2 rounded-full bg-[#acacac] dark:bg-[#333333] text-[#161616] dark:text-[#d4d4d3] transition-transform transform hover:scale-105"
+                    className="p-2 rounded-full bg-[#acacac] dark:bg-[#333333] text-[#161616] dark:text-[#d4d4d3] transition-transform transform hover:scale-105"
                 >
                     {darkMode ? (
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,12 +58,16 @@ function NavBar() {
                     )}
                 </button>
             </div>
-            <div className="flex flex-wrap justify-center md:justify-end gap-3  text-slate-800 mt-4 md:mt-0  dark:text-light-primary">
-                <Link to="https://www.linkedin.com/in/amir-elsayed-/" className="hover:underline">LinkedIn</Link>
-                <span>/</span>
-                <Link to="https://github.com/amiresaye6" className="hover:underline">GitHub</Link>
-                <span>/</span>
-                <Link to="https://x.com/amir38561600" className="hover:underline">X</Link>
+
+            {/* Right Section */}
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-slate-800 dark:text-light-primary">
+                <div className="flex flex-wrap justify-center md:justify-end gap-3 md:gap-6 text-slate-800 dark:text-light-primary">
+                    <Link to="https://www.linkedin.com/in/amir-elsayed-/" className="hover:underline text-sm md:text-base">LinkedIn</Link>
+                    <span>/</span>
+                    <Link to="https://github.com/amiresaye6" className="hover:underline text-sm md:text-base">GitHub</Link>
+                    <span>/</span>
+                    <Link to="https://x.com/amir38561600" className="hover:underline text-sm md:text-base">X</Link>
+                </div>
             </div>
         </div>
     );
