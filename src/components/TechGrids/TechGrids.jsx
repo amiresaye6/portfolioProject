@@ -1,3 +1,4 @@
+import toast, { Toaster } from "react-hot-toast";
 import Azure from "../../assets/technologies/Azure.png";
 import Bash from "../../assets/technologies/Bash.png";
 import Cloudflare from "../../assets/technologies/Cloudflare.png";
@@ -20,6 +21,31 @@ import Ubuntu from "../../assets/technologies/Ubuntu.png";
 import Vim from "../../assets/technologies/Vim.png";
 import Visual_Studio_Code from "../../assets/technologies/Visual_Studio_Code.png";
 import Vite from "../../assets/technologies/Vite.js.png";
+
+// const cursorImages = {
+//   Azure,
+//   Bash,
+//   Cloudflare,
+//   Express,
+//   Flask,
+//   Git,
+//   GitHub,
+//   HTML5,
+//   JavaScript,
+//   Linux,
+//   MongoDB,
+//   MySQL,
+//   Node,
+//   Python,
+//   ReactImg,
+//   Redis,
+//   Redux,
+//   Tailwind_CSS,
+//   Ubuntu,
+//   Vim,
+//   Visual_Studio_Code,
+//   Vite
+// };
 
 // Frontend, Backend, and DevOps tech arrays
 const frontendTech = [
@@ -53,13 +79,18 @@ const devopsTech = [
   { img: Visual_Studio_Code, name: "VS Code" }
 ];
 
-// Single grid renderer
 const TechGrids = () => {
+  const handleSetCursor = (name) => {
+    sessionStorage.setItem('cursor', name);
+    window.dispatchEvent(new Event('storage')); // Trigger update
+    toast.success('Have fun 😊');
+  };
 
   return (
-    <div className="p-8 min-h-screen transition-colors duration-300 ">
+    <div className="p-8 min-h-screen transition-colors duration-300">
+      <Toaster />
       {/* Backend Technologies */}
-      <div className="mb-12 ">
+      <div className="mb-12">
         <h2 className="text-2xl font-bold text-center mb-4 dark:text-slate-800">
           Backend Technologies
         </h2>
@@ -67,6 +98,7 @@ const TechGrids = () => {
           {backendTech.map((tech, index) => (
             <div
               key={index}
+              onClick={() => handleSetCursor(tech.name)}
               className="group relative p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
             >
               <img
@@ -93,6 +125,7 @@ const TechGrids = () => {
           {frontendTech.map((tech, index) => (
             <div
               key={index}
+              onClick={() => handleSetCursor(tech.name)}
               className="group relative p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
             >
               <img
@@ -119,6 +152,7 @@ const TechGrids = () => {
           {devopsTech.map((tech, index) => (
             <div
               key={index}
+              onClick={() => handleSetCursor(tech.name)}
               className="group relative p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
             >
               <img
@@ -137,7 +171,6 @@ const TechGrids = () => {
       </div>
     </div>
   );
-
 };
 
 export default TechGrids;

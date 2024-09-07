@@ -8,12 +8,12 @@ function Footer() {
     >
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Contact Information */}
-        <div className="flex flex-col items-center mb-8 md:mb-0">
+        <div className="flex flex-col items-start mb-8 md:mb-0">
           <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
           <p className="text-lg text-center mb-6">Feel free to reach out via email or follow me on social media.</p>
           <a
             href="mailto:amiralsayed.work@gmail.com"
-            className="bg-dark-secondary dark:bg-light-secondary text-light-primary dark:text-dark-primary p-3 rounded-full transition-transform transform hover:scale-105 flex items-center"
+            className="bg-white dark:bg-[#161616] dark:text-[#d4d4d3] rounded-full px-3 py-1 border-4 border-[#e5e7eb] dark:border-[#4a4a4a] transition-transform transform hover:scale-105"
           >
             Email Me
           </a>

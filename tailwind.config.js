@@ -10,10 +10,12 @@ module.exports = {
         light: {
           primary: '#d4d4d3', // Light mode primary color
           secondary: '#acacac', // Light mode secondary color
+          third: '#f5f5f5', // Light mode secondary color
         },
         dark: {
           primary: '#161616', // Dark mode primary color
           secondary: '#acacac', // Dark mode secondary color
+          third: '#2c2c2c', // Dark mode secondary color
         },
       },
       backgroundImage: {
