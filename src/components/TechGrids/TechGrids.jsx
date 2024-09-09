@@ -22,32 +22,6 @@ import Vim from "../../assets/technologies/Vim.png";
 import Visual_Studio_Code from "../../assets/technologies/Visual_Studio_Code.png";
 import Vite from "../../assets/technologies/Vite.js.png";
 
-// const cursorImages = {
-//   Azure,
-//   Bash,
-//   Cloudflare,
-//   Express,
-//   Flask,
-//   Git,
-//   GitHub,
-//   HTML5,
-//   JavaScript,
-//   Linux,
-//   MongoDB,
-//   MySQL,
-//   Node,
-//   Python,
-//   ReactImg,
-//   Redis,
-//   Redux,
-//   Tailwind_CSS,
-//   Ubuntu,
-//   Vim,
-//   Visual_Studio_Code,
-//   Vite
-// };
-
-// Frontend, Backend, and DevOps tech arrays
 const frontendTech = [
   { img: HTML5, name: "HTML5" },
   { img: JavaScript, name: "JavaScript" },
@@ -99,7 +73,7 @@ const TechGrids = () => {
             <div
               key={index}
               onClick={() => handleSetCursor(tech.name)}
-              className="group relative p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+              className="group relative p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 z-20 backdrop-blur-lg bg-white/30 dark:bg-gray-700/30"
             >
               <img
                 src={tech.img}
@@ -126,7 +100,7 @@ const TechGrids = () => {
             <div
               key={index}
               onClick={() => handleSetCursor(tech.name)}
-              className="group relative p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+              className="group relative p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 z-20 backdrop-blur-lg bg-white/30 dark:bg-gray-700/30"
             >
               <img
                 src={tech.img}
@@ -153,7 +127,7 @@ const TechGrids = () => {
             <div
               key={index}
               onClick={() => handleSetCursor(tech.name)}
-              className="group relative p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+              className="group relative p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 z-20 backdrop-blur-lg bg-white/30 dark:bg-gray-700/30"
             >
               <img
                 src={tech.img}

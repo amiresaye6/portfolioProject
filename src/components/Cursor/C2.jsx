@@ -20,7 +20,7 @@ const CursorFollower2 = () => {
     window.addEventListener('storage', updateCursorImage);
 
     const handleMouseMove = (event) => {
-      setCursorPosition({ x: event.clientX - 12, y: event.clientY - 12 });
+      setCursorPosition({ x: event.clientX *1.1 + 2, y: event.clientY * 1.1 + 2 });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -33,7 +33,7 @@ const CursorFollower2 = () => {
 
   return (
     <div
-      className="fixed pointer-events-none z-[5] transition-transform ease-out duration-[100]"
+      className="fixed pointer-events-none z-50"
       style={{
         transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`,
         width: '40px',
